@@ -16,6 +16,7 @@ public class RotaSystem {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        // Alow home menu to apper 
         Home home = new Home();
         home.setVisible(true);
         

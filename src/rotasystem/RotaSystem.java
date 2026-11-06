@@ -17,7 +17,10 @@ public class RotaSystem {
         // TODO code application logic here
         
         // Alow home menu to apper 
-
+        Home home = new Home();
+        home.setVisible(true);
+        
+        
         
         
         Clock clock = new Clock();

@@ -4,6 +4,9 @@
  */
 package rotasystem;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Cj20b
@@ -36,15 +39,12 @@ public class Clock extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         BottomPanel.setBackground(new java.awt.Color(24, 25, 30));
-        BottomPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         BottomPanel.setForeground(new java.awt.Color(255, 255, 255));
 
         filler1.setBackground(new java.awt.Color(255, 255, 255));
-        filler1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         filler1.setForeground(new java.awt.Color(255, 255, 255));
 
         filler2.setBackground(new java.awt.Color(255, 255, 255));
-        filler2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         filler2.setForeground(new java.awt.Color(255, 255, 255));
 
         filler3.setBackground(new java.awt.Color(255, 255, 255));
@@ -64,6 +64,11 @@ public class Clock extends javax.swing.JFrame {
         );
 
         jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout BottomPanelLayout = new javax.swing.GroupLayout(BottomPanel);
         BottomPanel.setLayout(BottomPanelLayout);
@@ -78,7 +83,7 @@ public class Clock extends javax.swing.JFrame {
                         .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(BottomPanelLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(45, 45, 45)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -98,7 +103,7 @@ public class Clock extends javax.swing.JFrame {
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(141, 141, 141)
+                        .addGap(132, 132, 132)
                         .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(117, 117, 117))))
         );
@@ -116,6 +121,34 @@ public class Clock extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    
+    
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        boolean clockin = true;
+        int time = 0; 
+
+        
+        
+        while(clockin == true){
+            time = time+1;      
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Clock.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println(time);
+            
+            
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

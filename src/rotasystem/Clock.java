@@ -34,7 +34,8 @@ public class Clock extends javax.swing.JFrame {
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 640), new java.awt.Dimension(0, 640), new java.awt.Dimension(32767, 640));
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(160, 0), new java.awt.Dimension(160, 0), new java.awt.Dimension(160, 32767));
         TopPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BttnClockIn = new javax.swing.JButton();
+        JToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,21 +53,35 @@ public class Clock extends javax.swing.JFrame {
 
         TopPanel.setBackground(new java.awt.Color(41, 44, 52));
 
+        BttnClockIn.setText("Clockin");
+        BttnClockIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BttnClockInActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout TopPanelLayout = new javax.swing.GroupLayout(TopPanel);
         TopPanel.setLayout(TopPanelLayout);
         TopPanelLayout.setHorizontalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(TopPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(BttnClockIn, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TopPanelLayout.setVerticalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(TopPanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(BttnClockIn)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JToggleButton1.setSelected(true);
+        JToggleButton1.setText("jToggleButton1");
+        JToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                JToggleButton1ActionPerformed(evt);
             }
         });
 
@@ -82,10 +97,10 @@ public class Clock extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(BottomPanelLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JToggleButton1)
+                        .addGap(93, 93, 93)))
                 .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
             .addComponent(TopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -102,8 +117,8 @@ public class Clock extends javax.swing.JFrame {
                             .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(132, 132, 132)
+                        .addComponent(JToggleButton1)
+                        .addGap(120, 120, 120)
                         .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(117, 117, 117))))
         );
@@ -121,35 +136,60 @@ public class Clock extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    
-    
-    
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    
-        boolean clockin = true;
-        int time = 0; 
 
-        
-        
-        while(clockin == true){
-            time = time+1;      
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Clock.class.getName()).log(Level.SEVERE, null, ex);
+    private void BttnClockInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BttnClockInActionPerformed
+
+        int time = 0;
+
+        timePressed = 1;
+
+        if (timePressed == 1){
+            timePressed = 0;
+            clockin = true;
+
+            while(clockin == true){
+                time = time+1;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Clock.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                System.out.println(time);
+
             }
-            System.out.println(time);
+
+        }
+
+    }//GEN-LAST:event_BttnClockInActionPerformed
+
+    private void JToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JToggleButton1ActionPerformed
+
+JToggleButton1.addItemListener(new java.awt.event.ItemListener() {
+    @Override
+    public void itemStateChanged(java.awt.event.ItemEvent evt) {
+        
+        if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
+
             
-            
+        } else if (evt.getStateChange() == java.awt.event.ItemEvent.DESELECTED) {
+
         }
         
         
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+        JToggleButton1.revalidate();
+        JToggleButton1.repaint();
+    }
+});
 
+
+        
+        
+    }//GEN-LAST:event_JToggleButton1ActionPerformed
+    
+    int timePressed = 0;
+    boolean clockin = false;
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -188,10 +228,11 @@ public class Clock extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BottomPanel;
+    private javax.swing.JButton BttnClockIn;
+    private javax.swing.JToggleButton JToggleButton1;
     private javax.swing.JPanel TopPanel;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

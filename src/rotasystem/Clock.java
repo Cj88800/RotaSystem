@@ -141,10 +141,11 @@ String [] Clocked = new String[2];
             String ClockedIn = null ;
             String ClockedOut = null;
             if(Clocked[0]!=null){
-                
+                Clocked[1]=Temp;
             }
             else{
                 Clocked[0]=Temp;
+                
             }
             
         
@@ -155,6 +156,7 @@ String [] Clocked = new String[2];
          timePressed = 2;
         }
 
+       
             
 
 

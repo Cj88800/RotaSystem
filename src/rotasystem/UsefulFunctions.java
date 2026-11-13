@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -65,9 +67,20 @@ public class UsefulFunctions {
             // Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
             return id;
         }
+    }
     
-    
-    
+    /**
+     *
+     */
+    public void GetDateAndTime(){
+         Calendar cal=Calendar.getInstance();
+         cal.setTimeInMillis(System.currentTimeMillis());
+         SimpleDateFormat format=new SimpleDateFormat("dd:MM:yyyy,HH:mm");
+         String Temp = format.format(cal.getTime());
+        
+        
+        
+    }
     
     
     

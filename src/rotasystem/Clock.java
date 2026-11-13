@@ -133,9 +133,8 @@ String [] Clocked = new String[2];
 
          Calendar cal=Calendar.getInstance();
          cal.setTimeInMillis(System.currentTimeMillis());
-
          SimpleDateFormat format=new SimpleDateFormat("dd:MM:yyyy,HH:mm");
-    String Temp = format.format(cal.getTime());
+         String Temp = format.format(cal.getTime());
             
         
             String ClockedIn = null ;

@@ -23,7 +23,9 @@ public class RotaSystem {
         
         
         Clock clock = new Clock();
-        clock.setVisible(true);
+        clock.setVisible(false);
+        Home home = new Home();
+        home.setVisible(true);
         
         
     }

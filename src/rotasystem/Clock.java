@@ -40,6 +40,7 @@ String [] Clocked = new String[2];
         BttnClockIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         BottomPanel.setBackground(new java.awt.Color(24, 25, 30));
         BottomPanel.setForeground(new java.awt.Color(255, 255, 255));

@@ -14,13 +14,7 @@ public class RotaSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        // Alow home menu to apper 
 
-        
-        
-        
         
         Clock clock = new Clock();
         clock.setVisible(false);

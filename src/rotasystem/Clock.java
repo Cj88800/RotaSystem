@@ -38,6 +38,11 @@ String [] Clocked = new String[2];
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(160, 0), new java.awt.Dimension(160, 0), new java.awt.Dimension(160, 32767));
         TopPanel = new javax.swing.JPanel();
         BttnClockIn = new javax.swing.JButton();
+        ButtonClock = new javax.swing.JButton();
+        ButtonHome = new javax.swing.JButton();
+        ButtonCalender = new javax.swing.JButton();
+        ButtonTimeSheet = new javax.swing.JButton();
+        ButtonTimeAway = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -62,7 +67,7 @@ String [] Clocked = new String[2];
         TopPanel.setLayout(TopPanelLayout);
         TopPanelLayout.setHorizontalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         TopPanelLayout.setVerticalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,6 +81,51 @@ String [] Clocked = new String[2];
             }
         });
 
+        ButtonClock.setBackground(new java.awt.Color(51, 51, 51));
+        ButtonClock.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        ButtonClock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your_paragraph_text_2_cropped.png"))); // NOI18N
+        ButtonClock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonClockActionPerformed(evt);
+            }
+        });
+
+        ButtonHome.setBackground(new java.awt.Color(51, 51, 51));
+        ButtonHome.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        ButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your paragraph text (7) (1).png"))); // NOI18N
+        ButtonHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonHomeActionPerformed(evt);
+            }
+        });
+
+        ButtonCalender.setBackground(new java.awt.Color(51, 51, 51));
+        ButtonCalender.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        ButtonCalender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your paragraph text (6) (1).png"))); // NOI18N
+        ButtonCalender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCalenderActionPerformed(evt);
+            }
+        });
+
+        ButtonTimeSheet.setBackground(new java.awt.Color(51, 51, 51));
+        ButtonTimeSheet.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        ButtonTimeSheet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Adobe Express - file.png"))); // NOI18N
+        ButtonTimeSheet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTimeSheetActionPerformed(evt);
+            }
+        });
+
+        ButtonTimeAway.setBackground(new java.awt.Color(51, 51, 51));
+        ButtonTimeAway.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        ButtonTimeAway.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your_paragraph_text_3_cropped.png"))); // NOI18N
+        ButtonTimeAway.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTimeAwayActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BottomPanelLayout = new javax.swing.GroupLayout(BottomPanel);
         BottomPanel.setLayout(BottomPanelLayout);
         BottomPanelLayout.setHorizontalGroup(
@@ -86,12 +136,24 @@ String [] Clocked = new String[2];
                 .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BottomPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                        .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(BottomPanelLayout.createSequentialGroup()
+                                .addComponent(ButtonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonCalender)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonTimeSheet, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonTimeAway, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonClock, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE))
+                            .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BttnClockIn, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)))
+                        .addGap(66, 66, 66)))
                 .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
             .addComponent(TopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -109,9 +171,17 @@ String [] Clocked = new String[2];
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BottomPanelLayout.createSequentialGroup()
                         .addComponent(BttnClockIn)
-                        .addGap(122, 122, 122)
+                        .addGap(131, 131, 131)
                         .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(ButtonTimeSheet)
+                                .addComponent(ButtonClock)
+                                .addComponent(ButtonHome)
+                                .addComponent(ButtonTimeAway))
+                            .addComponent(ButtonCalender, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -163,6 +233,44 @@ String [] Clocked = new String[2];
         
 
     }//GEN-LAST:event_BttnClockInActionPerformed
+
+    private void ButtonCalenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCalenderActionPerformed
+    
+        
+        Calender calender = new Calender();
+        calender.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+    }//GEN-LAST:event_ButtonCalenderActionPerformed
+
+    private void ButtonTimeAwayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTimeAwayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonTimeAwayActionPerformed
+
+    private void ButtonClockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClockActionPerformed
+        // TODO add your handling code here:
+
+
+
+    }//GEN-LAST:event_ButtonClockActionPerformed
+
+    private void ButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonHomeActionPerformed
+    
+              Home home = new Home();
+              home.setVisible(true);
+              this.setVisible(false);
+        
+    }//GEN-LAST:event_ButtonHomeActionPerformed
+
+    private void ButtonTimeSheetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTimeSheetActionPerformed
+        
+        TimeSheet timeSheet = new TimeSheet();
+        timeSheet.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_ButtonTimeSheetActionPerformed
     
 
     
@@ -206,6 +314,11 @@ String [] Clocked = new String[2];
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BottomPanel;
     private javax.swing.JButton BttnClockIn;
+    private javax.swing.JButton ButtonCalender;
+    private javax.swing.JButton ButtonClock;
+    private javax.swing.JButton ButtonHome;
+    private javax.swing.JButton ButtonTimeAway;
+    private javax.swing.JButton ButtonTimeSheet;
     private javax.swing.JPanel TopPanel;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;

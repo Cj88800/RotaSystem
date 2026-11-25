@@ -219,7 +219,7 @@
               <Font name="Segoe UI" size="8" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rotasystem/Your_paragraph_text_2_cropped.png"/>
+              <Image iconType="3" name="/rotasystem/Clock.png"/>
             </Property>
           </Properties>
           <Events>
@@ -235,7 +235,7 @@
               <Font name="Segoe UI" size="8" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rotasystem/Your paragraph text (7) (1).png"/>
+              <Image iconType="3" name="/rotasystem/Home.png"/>
             </Property>
           </Properties>
           <Events>
@@ -251,7 +251,7 @@
               <Font name="Segoe UI" size="8" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rotasystem/Your paragraph text (6) (1).png"/>
+              <Image iconType="3" name="/rotasystem/Calender.png"/>
             </Property>
           </Properties>
           <Events>
@@ -267,7 +267,7 @@
               <Font name="Segoe UI" size="8" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rotasystem/Adobe Express - file.png"/>
+              <Image iconType="3" name="/rotasystem/TimeSheet.png"/>
             </Property>
           </Properties>
           <Events>
@@ -283,7 +283,7 @@
               <Font name="Segoe UI" size="8" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rotasystem/Your_paragraph_text_3_cropped.png"/>
+              <Image iconType="3" name="/rotasystem/TimeAway.png"/>
             </Property>
           </Properties>
           <Events>

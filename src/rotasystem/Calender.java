@@ -50,11 +50,9 @@ String [] Clocked = new String[2];
         BottomPanel.setForeground(new java.awt.Color(255, 255, 255));
 
         filler1.setBackground(new java.awt.Color(255, 255, 255));
-        filler1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         filler1.setForeground(new java.awt.Color(255, 255, 255));
 
         filler2.setBackground(new java.awt.Color(255, 255, 255));
-        filler2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         filler2.setForeground(new java.awt.Color(255, 255, 255));
 
         filler3.setBackground(new java.awt.Color(255, 255, 255));
@@ -75,7 +73,7 @@ String [] Clocked = new String[2];
 
         ButtonClock.setBackground(new java.awt.Color(51, 51, 51));
         ButtonClock.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        ButtonClock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your_paragraph_text_2_cropped.png"))); // NOI18N
+        ButtonClock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Clock.png"))); // NOI18N
         ButtonClock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonClockActionPerformed(evt);
@@ -84,7 +82,7 @@ String [] Clocked = new String[2];
 
         ButtonHome.setBackground(new java.awt.Color(51, 51, 51));
         ButtonHome.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        ButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your paragraph text (7) (1).png"))); // NOI18N
+        ButtonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Home.png"))); // NOI18N
         ButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonHomeActionPerformed(evt);
@@ -93,7 +91,7 @@ String [] Clocked = new String[2];
 
         ButtonCalender.setBackground(new java.awt.Color(51, 51, 51));
         ButtonCalender.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        ButtonCalender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your paragraph text (6) (1).png"))); // NOI18N
+        ButtonCalender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Calender.png"))); // NOI18N
         ButtonCalender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonCalenderActionPerformed(evt);
@@ -102,7 +100,7 @@ String [] Clocked = new String[2];
 
         ButtonTimeSheet.setBackground(new java.awt.Color(51, 51, 51));
         ButtonTimeSheet.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        ButtonTimeSheet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Adobe Express - file.png"))); // NOI18N
+        ButtonTimeSheet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/TimeSheet.png"))); // NOI18N
         ButtonTimeSheet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonTimeSheetActionPerformed(evt);
@@ -111,7 +109,7 @@ String [] Clocked = new String[2];
 
         ButtonTimeAway.setBackground(new java.awt.Color(51, 51, 51));
         ButtonTimeAway.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        ButtonTimeAway.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/Your_paragraph_text_3_cropped.png"))); // NOI18N
+        ButtonTimeAway.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rotasystem/TimeAway.png"))); // NOI18N
         ButtonTimeAway.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonTimeAwayActionPerformed(evt);
